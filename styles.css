@@ -1,0 +1,445 @@
+:root {
+    --almostWhite: hsl(0, 0%, 98%);
+    --mediumGray: hsl(0, 0%, 41%);
+    --almostBlack: hsl(0, 0%, 8%);
+  }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Epilogue', sans-serif;
+    color: var(--mediumGray);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+}
+
+.container {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Header section */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 16px;
+    margin-bottom: 24px;
+}
+
+.logo {
+    height: 87px;
+    width: 35px;
+}
+
+/* Sidebar & Desktop section */
+
+/* Sidebar only */
+.sidebar {
+    height: 100%; /*100% Full-height*/
+    width: 0; /*0 width - changed this with JavaScript*/
+    position: fixed; /*Stay in place*/
+    z-index: 2; /*Stay on top*/
+    top: 0;
+    right: 0;
+    background-color: var(--almostWhite);
+    transition: .5s; /*0.5 second transition effect to slide in the sidebar*/
+    overflow-x: hidden; /*Disable horizontal scroll*/
+    padding-top: 78px;
+}
+
+.cover-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--almostBlack);
+    opacity: 0.75;
+    z-index: 1;
+    display: none;
+}
+
+.sidebar .closebtn {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 22px;
+    right: 20px;
+}
+
+.features-container,
+.company-container {
+    max-width: 110px;
+}
+
+#features-links,
+#company-links {
+    max-width: 120px;
+}
+
+.sidebar p,
+.sidebar a {
+    font-weight: 500;
+    line-height: 26px;
+}
+
+.sidebar div {
+    margin-bottom: 16px;
+}
+
+.sidebar a {
+    display: inline-block;
+}
+
+.sidebar a:last-child {
+    margin-top: 16px;
+}
+
+.arrow-icon-down,
+.arrow-icon-up {
+    margin-left: 17px;
+}
+
+/* Desktop only */
+.desktop-nav {
+    display: none;
+    width: 100%;
+}
+
+.desktop-nav-login {
+    display: flex;
+}
+
+.login-btn,
+.register-btn {
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 500;
+    color: inherit;
+    line-height: 16px;
+    background-color: transparent;
+}
+
+.login-btn {
+    border: none;
+    margin-right: 40px;
+}
+
+.login-btn:hover,
+.login-btn:focus {
+    color: var(--almostBlack);
+}
+
+.register-btn {
+    padding: 13px 22px; 
+    border: 1px solid var(--mediumGray);
+    border-radius: 15px; 
+}
+
+.register-btn:hover,
+.register-btn:focus {
+    color: var(--almostBlack);
+    border-color: var(--almostBlack);
+}
+
+.desktop-nav-links {
+    display: flex;
+    margin-left: 62px;
+}
+
+.desktop-features-container,
+.desktop-company-container,
+.desktop-nav-links > a {
+    font-size: 14px;
+    line-height: 16px;
+    margin-right: 40px;
+}
+
+.desktop-features-container:hover,
+.desktop-features-container:focus,
+.desktop-company-container:hover,
+.desktop-company-container:focus,
+.desktop-nav-links > a:hover,
+.desktop-nav-links > a:focus {
+    color: var(--almostBlack);
+}
+
+.desktop-arrow-icon-down,
+.desktop-arrow-icon-up {
+    margin-left: 8px;
+}
+
+.desktop-arrow-icon-down:hover,
+.desktop-arrow-icon-down:focus,
+.desktop-arrow-icon-up:hover,
+.desktop-arrow-icon-up:focus {
+    filter: invert(0%) sepia(100%) saturate(0%) hue-rotate(43deg) brightness(99%) contrast(104%);
+}
+
+/* used this (https://codepen.io/sosuke/pen/Pjoqqp) to convert #000000 into the right value for "filter" above */
+
+.desktop-nav-links {
+    position: relative;
+}
+
+#desktop-features-links,
+#desktop-company-links {
+    padding: 24px 24px 8px;
+    border-radius: 10px;
+    box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: 36px;
+}
+
+#desktop-features-links {
+    left: -70px;
+}
+
+#desktop-company-links {
+    left: 110px;
+}
+
+.desktop-nav-links p,
+.desktop-nav-links a {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+/* Common properties - Sidebar & Desktop */
+.sidebar a,
+.sidebar div,
+.openbtn,
+.sidebar .closebtn,
+.desktop-nav-links > div,
+.login-btn,
+.register-btn {
+    cursor: pointer;
+}
+
+.features-icon {
+    margin-right: 16px;
+}
+
+.features-container,
+.desktop-features-container,
+.company-container,
+.desktop-company-container
+ {
+    display: flex;
+    align-items: center;
+}
+
+#features-links a,
+#company-links a,
+#desktop-features-links a,
+#desktop-company-links a {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.display-block {
+    display: block;
+}
+
+.display-none {
+    display: none;
+}
+
+/* Main section */
+main,
+nav {
+    max-width: 750px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.main-image img {
+    margin-bottom: 48px;
+}
+
+.main-image-desktop {
+    display: none;
+}
+
+.main-content {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 94px;
+}
+
+.main-content,
+.main-image {
+    text-align: center;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 36px;
+    color: var(--almostBlack);
+    line-height: 42px;
+    letter-spacing: -0.5px;
+    margin-bottom: 16px;
+}
+
+.main-content p {
+    font-weight: 500;
+    line-height: 26px;
+    margin-bottom: 24px;
+}
+
+.main-content-button {
+    display: inline-block;
+    font-weight: 700;
+    color: var(--almostWhite);
+    background-color: var(--almostBlack);
+    line-height: 26px;
+    letter-spacing: -0.25px;
+    padding: 11px 22px;
+    border: 1px solid var(--almostBlack);
+    border-radius: 15px;
+    margin-bottom: 48px;
+}
+
+.main-content-button:hover,
+.main-content-button:focus {
+    color: var(--almostBlack);
+    background-color: var(--almostWhite);
+}
+
+.main-content-links {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#databiz-img {
+    width: 81.25px;
+    height: 14.36px;
+}
+
+#audiophile-img {
+    width: 52.87px;
+    height: 26px;
+}
+
+#meet-img { 
+    width: 66.14px;
+    height: 14.36px;
+}
+
+#maker-img {
+    width: 58.9px;
+    height: 17.23px;
+}
+
+/* Breakpoints */
+@media (min-width: 1200px) {
+    .desktop-nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .openbtn {
+        display: none;
+    }
+    
+    nav {
+        max-width: 1360px;
+        margin: 21px 0px 67px;
+    }
+    
+    .container {
+        width: 95%;
+    }
+    
+    main {
+        display: flex;
+        justify-content: space-between;
+        max-width: 1145px;
+    }
+
+    .main-image-mobile {
+        display: none;
+    }
+
+    .main-image-desktop {
+        display: inline-block;
+        width: 480px;
+        height: 640px;
+    }
+
+    .main-image {
+        order: 1;
+        width: 43%;
+        text-align: right;
+    }
+
+    .main-image img {
+        margin-bottom: 0px;
+    }
+
+    .main-content {
+        width: 45%;
+        text-align: left;
+        margin: 108px 0px 122px; 
+    }
+
+    h1 {
+        font-size: 80px;
+        line-height: 80px;
+        letter-spacing: -1.1px;
+        margin-bottom: 48px;
+    }
+
+    .main-content p {
+        font-size: 18px;
+        line-height: 28px;
+        margin-bottom: 51px;
+        max-width: 445px;
+    }
+
+    .main-content-button {
+        font-size: 18px;
+        line-height: 28px;
+        padding: 15px 30px;
+        margin-bottom: 108px;
+    }
+
+    #databiz-img {
+        width: 113px;
+        height: 20px;
+    }
+    
+    #audiophile-img {
+        width: 73px;
+        height: 36px;
+    }
+    
+    #meet-img { 
+        width: 90px;
+        height: 20px;
+    }
+    
+    #maker-img {
+        width: 82px;
+        height: 24px;
+    }
+}
