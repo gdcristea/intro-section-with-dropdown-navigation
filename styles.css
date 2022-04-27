@@ -146,7 +146,7 @@ nav {
 
 .register-btn {
     padding: 13px 22px; 
-    border: 1px solid var(--mediumGray);
+    border: 2px solid var(--mediumGray);
     border-radius: 15px; 
 }
 
