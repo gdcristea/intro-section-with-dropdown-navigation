@@ -13,6 +13,7 @@
 body {
     font-family: 'Epilogue', sans-serif;
     color: var(--mediumGray);
+    background-color: var(--almostWhite);
 }
 
 a {
